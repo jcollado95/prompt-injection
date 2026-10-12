@@ -1,0 +1,23 @@
+[
+  {
+    "variant_id": "V0",
+    "category": "Baseline",
+    "description": "Standard ZebraLogic baseline canonical names, occupations, hobbies, clue order.",
+    "parse_success": true,
+    "exact_match": 1,
+    "cell_accuracy": 1.0,
+    "avg_attr_acc": 1.0,
+    "cells_correct": 4,
+    "total_cells": 4,
+    "hits_Name": 4,
+    "hits_Cigar": 4,
+    "hits_Lunch": 4,
+    "hits_Book": 4,
+    "dataset": "4x4",
+    "model": "gemma-4-E4B-it",
+    "temperature": 0.0,
+    "output_tokens": 2375,
+    "elapsed_sec": 59.21,
+    "error": null
+  }
+]

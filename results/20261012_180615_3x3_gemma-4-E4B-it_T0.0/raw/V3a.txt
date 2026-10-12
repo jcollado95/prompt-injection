@@ -1,0 +1,80 @@
+variant_id    : V3a
+model         : gemma-4-E4B-it
+output_tokens : 819
+elapsed_sec   : 20.08
+error         : None
+============================================================
+
+Step 1: Analyze Clue 3.
+Clue 3 states: "The person whose occupation is architect is in the second house."
+House 2 Occupation = Architect.
+
+Step 2: Analyze Clue 1 and combine with Step 1.
+Clue 1 states: "Arnold is the architect."
+Since the architect is in House 2, Arnold must be in House 2.
+House 2 Name = Arnold.
+House 2 Occupation = Architect.
+
+Step 3: Analyze Clue 4.
+Clue 4 states: "The person whose hobby is reading is in the first house."
+House 1 Hobby = Reading.
+
+Step 4: Analyze Clue 5.
+Clue 5 states: "The nurse is the person whose hobby is healing."
+(Nurse $\iff$ Healing)
+
+Step 5: Determine the remaining occupations and hobbies for House 1 and House 3.
+Occupations remaining: Nurse, Librarian.
+Hobbies remaining: Building, Healing.
+
+From Step 4, we know (Nurse = Healing).
+If House 1 Hobby is Reading (from Step 3), then House 1 cannot be the Nurse (since Nurse = Healing).
+Therefore, House 1 Occupation must be Librarian.
+House 1 Occupation = Librarian.
+
+This leaves the Nurse for House 3.
+House 3 Occupation = Nurse.
+
+Now we assign hobbies based on occupations:
+Since House 3 is the Nurse, by Clue 5, House 3 Hobby must be Healing.
+House 3 Hobby = Healing.
+
+This leaves the Building hobby for House 2.
+House 2 Hobby = Building.
+
+Step 6: Verify the assignments so far.
+House 1: Occupation = Librarian, Hobby = Reading.
+House 2: Name = Arnold, Occupation = Architect, Hobby = Building.
+House 3: Occupation = Nurse, Hobby = Healing.
+
+Step 7: Determine the names for House 1 and House 3.
+Names remaining: Peter, Eric.
+
+Step 8: Analyze Clue 2.
+Clue 2 states: "The person whose hobby is building is somewhere to the left of Eric."
+The person whose hobby is building is in House 2 (Arnold).
+Therefore, Eric must be in House 3 (since House 1 is to the left of House 2, and House 2 is to the left of House 3).
+If Eric is in House 3, then Peter must be in House 1.
+
+House 1 Name = Peter.
+House 3 Name = Eric.
+
+Step 9: Final verification.
+House 1: Name=Peter, Occupation=Librarian, Hobby=Reading.
+House 2: Name=Arnold, Occupation=Architect, Hobby=Building.
+House 3: Name=Eric, Occupation=Nurse, Hobby=Healing.
+
+Check Clues:
+1. Arnold is the architect. (True: House 2)
+2. The person whose hobby is building (House 2) is somewhere to the left of Eric (House 3). (True)
+3. The person whose occupation is architect is in the second house. (True: House 2)
+4. The person whose hobby is reading is in the first house. (True: House 1)
+5. The nurse (House 3) is the person whose hobby is healing. (True: House 3)
+
+All conditions are met.
+
+{
+  "House 1": {"Name": "Peter", "Occupation": "librarian", "Hobby": "reading"},
+  "House 2": {"Name": "Arnold", "Occupation": "architect", "Hobby": "building"},
+  "House 3": {"Name": "Eric", "Occupation": "nurse", "Hobby": "healing"}
+}

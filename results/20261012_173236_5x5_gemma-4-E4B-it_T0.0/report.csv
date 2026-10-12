@@ -1,0 +1,2 @@
+variant_id,category,description,dataset,model,temperature,output_tokens,elapsed_sec,parse_success,exact_match,cell_accuracy,avg_attr_acc,cells_correct,total_cells,error,hits_Cigar,hits_Drink,hits_HairColor,hits_MusicGenre,hits_Name
+V0,Baseline,"Standard ZebraLogic baseline canonical names, occupations, hobbies, clue order.",5x5,gemma-4-E4B-it,0.0,11055,287.32,True,0,0.0,0.16,0,5,,0,2,1,0,1

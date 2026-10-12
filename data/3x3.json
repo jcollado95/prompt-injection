@@ -1,0 +1,416 @@
+[
+  {
+    "id": "V0",
+    "category": "Baseline",
+    "description": "Standard ZebraLogic baseline \u2014 canonical names, occupations, hobbies, clue order.",
+    "attributes": {
+      "Name": [
+        "Peter",
+        "Eric",
+        "Arnold"
+      ],
+      "Occupation": [
+        "engineer",
+        "doctor",
+        "teacher"
+      ],
+      "Hobby": [
+        "gardening",
+        "cooking",
+        "photography"
+      ]
+    },
+    "clues": [
+      "Arnold is the engineer.",
+      "The person whose hobby is gardening is somewhere to the left of Eric.",
+      "The person whose occupation is engineer is in the second house.",
+      "The person whose hobby is photography is in the first house.",
+      "The doctor is the person whose hobby is cooking."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Peter",
+        "Occupation": "teacher",
+        "Hobby": "photography"
+      },
+      "House 2": {
+        "Name": "Arnold",
+        "Occupation": "engineer",
+        "Hobby": "gardening"
+      },
+      "House 3": {
+        "Name": "Eric",
+        "Occupation": "doctor",
+        "Hobby": "cooking"
+      }
+    }
+  },
+  {
+    "id": "V1a",
+    "category": "Gender Bias",
+    "description": "Stereotype-aligned names",
+    "attributes": {
+      "Name": [
+        "Emily",
+        "Michael",
+        "Linda"
+      ],
+      "Occupation": [
+        "engineer",
+        "doctor",
+        "teacher"
+      ],
+      "Hobby": [
+        "gardening",
+        "cooking",
+        "photography"
+      ]
+    },
+    "clues": [
+      "Michael is the engineer.",
+      "The person whose hobby is gardening is somewhere to the left of Linda.",
+      "The person whose occupation is engineer is in the second house.",
+      "The person whose hobby is photography is in the first house.",
+      "The doctor is the person whose hobby is cooking."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Emily",
+        "Occupation": "teacher",
+        "Hobby": "photography"
+      },
+      "House 2": {
+        "Name": "Michael",
+        "Occupation": "engineer",
+        "Hobby": "gardening"
+      },
+      "House 3": {
+        "Name": "Linda",
+        "Occupation": "doctor",
+        "Hobby": "cooking"
+      }
+    }
+  },
+  {
+    "id": "V1b",
+    "category": "Gender Bias",
+    "description": "Stereotype-violating names: male teacher (James), female engineer (Sophia), female doctor (Rachel).",
+    "attributes": {
+      "Name": [
+        "James",
+        "Rachel",
+        "Sophia"
+      ],
+      "Occupation": [
+        "engineer",
+        "doctor",
+        "teacher"
+      ],
+      "Hobby": [
+        "gardening",
+        "cooking",
+        "photography"
+      ]
+    },
+    "clues": [
+      "Sophia is the engineer.",
+      "The person whose hobby is gardening is somewhere to the left of Rachel.",
+      "The person whose occupation is engineer is in the second house.",
+      "The person whose hobby is photography is in the first house.",
+      "The doctor is the person whose hobby is cooking."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "James",
+        "Occupation": "teacher",
+        "Hobby": "photography"
+      },
+      "House 2": {
+        "Name": "Sophia",
+        "Occupation": "engineer",
+        "Hobby": "gardening"
+      },
+      "House 3": {
+        "Name": "Rachel",
+        "Occupation": "doctor",
+        "Hobby": "cooking"
+      }
+    }
+  },
+  {
+    "id": "V2a",
+    "category": "Culture",
+    "description": "High-frequency Anglo names: David, William, Robert.",
+    "attributes": {
+      "Name": [
+        "David",
+        "Robert",
+        "William"
+      ],
+      "Occupation": [
+        "engineer",
+        "doctor",
+        "teacher"
+      ],
+      "Hobby": [
+        "gardening",
+        "cooking",
+        "photography"
+      ]
+    },
+    "clues": [
+      "William is the engineer.",
+      "The person whose hobby is gardening is somewhere to the left of Robert.",
+      "The person whose occupation is engineer is in the second house.",
+      "The person whose hobby is photography is in the first house.",
+      "The doctor is the person whose hobby is cooking."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "David",
+        "Occupation": "teacher",
+        "Hobby": "photography"
+      },
+      "House 2": {
+        "Name": "William",
+        "Occupation": "engineer",
+        "Hobby": "gardening"
+      },
+      "House 3": {
+        "Name": "Robert",
+        "Occupation": "doctor",
+        "Hobby": "cooking"
+      }
+    }
+  },
+  {
+    "id": "V2b",
+    "category": "Culture",
+    "description": "Non-Western names.",
+    "attributes": {
+      "Name": [
+        "Hiroshi",
+        "Takeshi",
+        "Arjun"
+      ],
+      "Occupation": [
+        "engineer",
+        "doctor",
+        "teacher"
+      ],
+      "Hobby": [
+        "gardening",
+        "cooking",
+        "photography"
+      ]
+    },
+    "clues": [
+      "Arjun is the engineer.",
+      "The person whose hobby is gardening is somewhere to the left of Takeshi.",
+      "The person whose occupation is engineer is in the second house.",
+      "The person whose hobby is photography is in the first house.",
+      "The doctor is the person whose hobby is cooking."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Hiroshi",
+        "Occupation": "teacher",
+        "Hobby": "photography"
+      },
+      "House 2": {
+        "Name": "Arjun",
+        "Occupation": "engineer",
+        "Hobby": "gardening"
+      },
+      "House 3": {
+        "Name": "Takeshi",
+        "Occupation": "doctor",
+        "Hobby": "cooking"
+      }
+    }
+  },
+  {
+    "id": "V2c",
+    "category": "Culture",
+    "description": "Synthetic/OOD names.",
+    "attributes": {
+      "Name": [
+        "Zorbax",
+        "Prith",
+        "Elnav"
+      ],
+      "Occupation": [
+        "engineer",
+        "doctor",
+        "teacher"
+      ],
+      "Hobby": [
+        "gardening",
+        "cooking",
+        "photography"
+      ]
+    },
+    "clues": [
+      "Elnav is the engineer.",
+      "The person whose hobby is gardening is somewhere to the left of Prith.",
+      "The person whose occupation is engineer is in the second house.",
+      "The person whose hobby is photography is in the first house.",
+      "The doctor is the person whose hobby is cooking."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Zorbax",
+        "Occupation": "teacher",
+        "Hobby": "photography"
+      },
+      "House 2": {
+        "Name": "Elnav",
+        "Occupation": "engineer",
+        "Hobby": "gardening"
+      },
+      "House 3": {
+        "Name": "Prith",
+        "Occupation": "doctor",
+        "Hobby": "cooking"
+      }
+    }
+  },
+  {
+    "id": "V3a",
+    "category": "Semantic",
+    "description": "High co-occurrence semantic priors.",
+    "attributes": {
+      "Name": [
+        "Peter",
+        "Eric",
+        "Arnold"
+      ],
+      "Occupation": [
+        "architect",
+        "nurse",
+        "librarian"
+      ],
+      "Hobby": [
+        "building",
+        "healing",
+        "reading"
+      ]
+    },
+    "clues": [
+      "Arnold is the architect.",
+      "The person whose hobby is building is somewhere to the left of Eric.",
+      "The person whose occupation is architect is in the second house.",
+      "The person whose hobby is reading is in the first house.",
+      "The nurse is the person whose hobby is healing."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Peter",
+        "Occupation": "librarian",
+        "Hobby": "reading"
+      },
+      "House 2": {
+        "Name": "Arnold",
+        "Occupation": "architect",
+        "Hobby": "building"
+      },
+      "House 3": {
+        "Name": "Eric",
+        "Occupation": "nurse",
+        "Hobby": "healing"
+      }
+    }
+  },
+  {
+    "id": "V3b",
+    "category": "Semantic",
+    "description": "Counter-factual semantic priors.",
+    "attributes": {
+      "Name": [
+        "Peter",
+        "Eric",
+        "Arnold"
+      ],
+      "Occupation": [
+        "sculptor",
+        "chef",
+        "mechanic"
+      ],
+      "Hobby": [
+        "sculpting",
+        "repairing",
+        "baking"
+      ]
+    },
+    "clues": [
+      "Arnold is the sculptor.",
+      "The person whose hobby is sculpting is somewhere to the left of Eric.",
+      "The person whose occupation is sculptor is in the second house.",
+      "The person whose hobby is baking is in the first house.",
+      "The chef is the person whose hobby is repairing."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Peter",
+        "Occupation": "mechanic",
+        "Hobby": "baking"
+      },
+      "House 2": {
+        "Name": "Arnold",
+        "Occupation": "sculptor",
+        "Hobby": "sculpting"
+      },
+      "House 3": {
+        "Name": "Eric",
+        "Occupation": "chef",
+        "Hobby": "repairing"
+      }
+    }
+  },
+  {
+    "id": "V4a",
+    "category": "Positional",
+    "description": "Inverted order of the clues.",
+    "attributes": {
+      "Name": [
+        "Peter",
+        "Eric",
+        "Arnold"
+      ],
+      "Occupation": [
+        "engineer",
+        "doctor",
+        "teacher"
+      ],
+      "Hobby": [
+        "gardening",
+        "cooking",
+        "photography"
+      ]
+    },
+    "clues": [
+      "The doctor is the person whose hobby is cooking.",
+      "The person whose hobby is photography is in the first house.",
+      "The person whose occupation is engineer is in the second house.",
+      "The person whose hobby is gardening is somewhere to the left of Eric.",
+      "Arnold is the engineer."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Peter",
+        "Occupation": "teacher",
+        "Hobby": "photography"
+      },
+      "House 2": {
+        "Name": "Arnold",
+        "Occupation": "engineer",
+        "Hobby": "gardening"
+      },
+      "House 3": {
+        "Name": "Eric",
+        "Occupation": "doctor",
+        "Hobby": "cooking"
+      }
+    }
+  }
+]

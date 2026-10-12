@@ -1,0 +1,71 @@
+[
+  {
+    "id": "V0",
+    "category": "Baseline",
+    "description": "Standard ZebraLogic baseline canonical names, occupations, hobbies, clue order.",
+    "attributes": {
+      "Name": [
+        "Eric",
+        "Arnold",
+        "Alice",
+        "Peter"
+      ],
+      "Cigar": [
+        "blue master",
+        "dunhill",
+        "pall mall",
+        "prince"
+      ],
+      "Lunch": [
+        "stew",
+        "spaguetti",
+        "pizza",
+        "grilled cheese"
+      ],
+      "Book": [
+        "fantasy",
+        "mystery",
+        "science fiction",
+        "romance"
+      ]
+    },
+    "clues": [
+      "Arnold is the person who loves eating grilled cheese.",
+      "The person who smokes Blue Master is Alice.",
+      "Arnold is in the second house.",
+      "The person who is a pizza lover and the person who loves the stew are next to each other.",
+      "Arnold is the person who loves science fiction books.",
+      "The person partial to Pall Mall is the person who loves eating grilled cheese.",
+      "Eric is somewhere to the left of Alice.",
+      "The person who is a pizza lover is somewhere to the left of the Dunhill smoker.",
+      "The person who loves fantasy books is the person who loves the stew.",
+      "The person who loves mystery books is not in the first house."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Eric",
+        "Cigar": "prince",
+        "Lunch": "spaguetti",
+        "Book": "romance"
+      },
+      "House 2": {
+        "Name": "Arnold",
+        "Cigar": "pall mall",
+        "Lunch": "grilled cheese",
+        "Book": "science fiction"
+      },
+      "House 3": {
+        "Name": "Alice",
+        "Cigar": "blue master",
+        "Lunch": "pizza",
+        "Book": "mystery"
+      },
+      "House 4": {
+        "Name": "Peter",
+        "Cigar": "dunhill",
+        "Lunch": "stew",
+        "Book": "fantasy"
+      }
+    }
+  }
+]

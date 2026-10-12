@@ -1,0 +1,100 @@
+[
+  {
+    "id": "V0",
+    "category": "Baseline",
+    "description": "Standard ZebraLogic baseline canonical names, occupations, hobbies, clue order.",
+    "attributes": {
+      "Name": [
+        "Peter",
+        "Bob",
+        "Eric",
+        "Arnold",
+        "Alice"
+      ],
+      "HairColor": [
+        "brown",
+        "black",
+        "gray",
+        "blonde",
+        "red"
+      ],
+      "Cigar": [
+        "pall mall",
+        "dunhill",
+        "prince",
+        "blue master",
+        "blends"
+      ],
+      "Drink": [
+        "milk",
+        "coffee",
+        "water",
+        "tea",
+        "root beer"
+      ],
+      "MusicGenre": [
+        "rock",
+        "classical",
+        "pop",
+        "jazz",
+        "hip hop"
+      ]
+    },
+    "clues": [
+      "The person who has gray hair and Bob are next to each other.",
+      "Arnold is not in the first house.",
+      "The person who has blonde hair is not in the second house.",
+      "Peter is not in the first house.",
+      "The Dunhill smoker is the person who likes milk.",
+      "Arnold is the one who only drinks water.",
+      "The person who loves classical music is the person partial to Pall Mall.",
+      "The person who loves pop music is directly left of the person who loves jazz music.",
+      "The person who has brown hair is Bob.",
+      "The person who has red hair is the person who loves hip-hop music.",
+      "The root beer lover is Alice.",
+      "The person who has black hair is in the third house.",
+      "There are two houses between the coffee drinker and Arnold.",
+      "The person who smokes Blue Master is somewhere to the right of the person who loves hip-hop music.",
+      "The person who has blonde hair is the person who smokes many unique blends.",
+      "Alice is the person who loves classical music.",
+      "The Dunhill smoker is the person who loves jazz music."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "Eric",
+        "HairColor": "blonde",
+        "Cigar": "blends",
+        "Drink": "coffee",
+        "MusicGenre": "rock"
+      },
+      "House 2": {
+        "Name": "Peter",
+        "HairColor": "red",
+        "Cigar": "prince",
+        "Drink": "tea",
+        "MusicGenre": "hip hop"
+      },
+      "House 3": {
+        "Name": "Alice",
+        "HairColor": "black",
+        "Cigar": "pall mall",
+        "Drink": "root beer",
+        "MusicGenre": "classical"
+      },
+      "House 4": {
+        "Name": "Arnold",
+        "HairColor": "gray",
+        "Cigar": "blue master",
+        "Drink": "water",
+        "MusicGenre": "pop"
+      },
+      "House 5": {
+        "Name": "Bob",
+        "HairColor": "brown",
+        "Cigar": "dunhill",
+        "Drink": "milk",
+        "MusicGenre": "jazz"
+      }
+    }
+  }
+]
