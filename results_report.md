@@ -10,12 +10,12 @@ Our benchmark design and complexity taxonomy follow the **ZebraLogic** framework
 
 ### Comparative Cross-Complexity Overview
 
-| Dataset | ZebraLogic Size | |S| = (N!)^M | Evaluated Variants | EM | Cell Acc | Avg Attr Acc | Tokens | Total Time | Avg Tok/Var | Avg Lat/Var |
-|:--------|:----------------|:-----------|:-------------------|:---|:---------|:-------------|:-------|:-----------|:------------|:------------|
-| **3×3** | **Small** | 216 | 9 (Full Battery) | **100.0%** (9/9) | **100.0%** | **100.0%** | 7,733 | 190.15s (~3.2m) | 859 tok | 21.13s |
-| **4×4** | **Medium** | 331,776 | 1 (Baseline V0) | **100.0%** (1/1) | **100.0%** | **100.0%** | 2,375 | 59.21s (~1.0m) | 2,375 tok | 59.21s |
-| **4×5** | **Large** | ~7.96 × 10⁶ | 1 (Baseline V0) | **100.0%** (1/1) | **100.0%** | **100.0%** | 3,257 | 81.67s (~1.4m) | 3,257 tok | 81.67s |
-| **5×5** | **X-Large** | ~2.49 × 10¹⁰ | 1 (Baseline V0) | **0.0%** (0/1) | **0.0%** | **16.0%** (4/25) | 11,055 | 287.33s (~4.8m) | 11,055 tok | 287.33s |
+| Dataset | ZebraLogic Size | \|S\| = (N!)^M | Evaluated Variants | EM | Cell Acc | Avg Attr Acc | Tokens | Total Time | Avg Tok/Var | Avg Lat/Var |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+| 3×3 | Small | 216 | 9 (Full Battery) | 100.0% (9/9) | 100.0% | 100.0% | 7,733 | 190.15s (~3.2m) | 859 tok | 21.13s |
+| 4×4 | Medium | 331,776 | 1 (Baseline V0) | 100.0% (1/1) | 100.0% | 100.0% | 2,375 | 59.21s (~1.0m) | 2,375 tok | 59.21s |
+| 4×5 | Large | ~7.96 × 10⁶ | 1 (Baseline V0) | 100.0% (1/1) | 100.0% | 100.0% | 3,257 | 81.67s (~1.4m) | 3,257 tok | 81.67s |
+| 5×5 | X-Large | ~2.49 × 10¹⁰ | 1 (Baseline V0) | 0.0% (0/1) | 0.0% | 16.0% (4/25) | 11,055 | 287.33s (~4.8m) | 11,055 tok | 287.33s |
 
 ---
 
