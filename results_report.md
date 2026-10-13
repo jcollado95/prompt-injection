@@ -4,19 +4,24 @@
 
 We conducted zero-shot empirical evaluations using `gemma-4-E4B-it` (temperature = 0.0, greedy decoding) to evaluate the fragility and scalability of Small Language Models (SLMs) on constraint-satisfaction tasks across different puzzle dimensions and perturbation axes.
 
+Our benchmark design and complexity taxonomy follow the **ZebraLogic** framework (Lin et al., 2025)[^1], which categorizes logic grid puzzles by search-space size |S| = (N!)^M for an N×M grid: **Small** (|S| < 10³), **Medium** (10³ ≤ |S| < 10⁶), **Large** (10⁶ ≤ |S| < 10¹⁰), and **X-Large** (|S| ≥ 10¹⁰).
+
+[^1]: Bill Yuchen Lin, Ronan Le Bras, et al. *ZebraLogic: On the Scaling Limits of LLMs for Logical Reasoning.* arXiv:2502.01100, 2025.
+
 ### Comparative Cross-Complexity Overview
 
-| Dataset Dimension | Evaluated Variants | Exact Match (EM) | Cell Accuracy | Avg Attr Accuracy | Output Tokens | Total Running Time | Avg Tokens / Variant | Avg Latency / Variant |
-|:------------------|:-------------------|:-----------------|:--------------|:------------------|:--------------|:-------------------|:---------------------|:----------------------|
-| **3x3** | 9 (Full Battery) | **100.0%** (9/9) | **100.0%** | **100.0%** | 7,733 | 190.15s (~3.2m) | 859 tok | 21.13s |
-| **4x4** | 1 (Baseline V0) | **100.0%** (1/1) | **100.0%** | **100.0%** | 2,375 | 59.21s (~1.0m) | 2,375 tok | 59.21s |
-| **5x5** | 1 (Baseline V0) | **0.0%** (0/1) | **0.0%** | **16.0%** (4/25) | 11,055 | 287.33s (~4.8m) | 11,055 tok | 287.33s |
+| Dataset | ZebraLogic Size | |S| = (N!)^M | Evaluated Variants | EM | Cell Acc | Avg Attr Acc | Tokens | Total Time | Avg Tok/Var | Avg Lat/Var |
+|:--------|:----------------|:-----------|:-------------------|:---|:---------|:-------------|:-------|:-----------|:------------|:------------|
+| **3×3** | **Small** | 216 | 9 (Full Battery) | **100.0%** (9/9) | **100.0%** | **100.0%** | 7,733 | 190.15s (~3.2m) | 859 tok | 21.13s |
+| **4×4** | **Medium** | 331,776 | 1 (Baseline V0) | **100.0%** (1/1) | **100.0%** | **100.0%** | 2,375 | 59.21s (~1.0m) | 2,375 tok | 59.21s |
+| **4×5** | **Large** | ~7.96 × 10⁶ | 1 (Baseline V0) | **100.0%** (1/1) | **100.0%** | **100.0%** | 3,257 | 81.67s (~1.4m) | 3,257 tok | 81.67s |
+| **5×5** | **X-Large** | ~2.49 × 10¹⁰ | 1 (Baseline V0) | **0.0%** (0/1) | **0.0%** | **16.0%** (4/25) | 11,055 | 287.33s (~4.8m) | 11,055 tok | 287.33s |
 
 ---
 
 ## 2. Key Empirical Findings
 
-### A. Surface & Structural Robustness on 3x3 Puzzles
+### A. Surface & Structural Robustness on 3×3 Puzzles (Small)
 In the 3x3 battery, `gemma-4-E4B-it` was tested across five distinct perturbation categories totaling 9 variants:
 - **Baseline (V0):** 100% EM (775 tokens, 19.48s).
 - **Gender Bias (V1a stereotype-aligned, V1b stereotype-violating):** 100% EM for both variants, showing no vulnerability to gendered occupation priors.
@@ -25,13 +30,20 @@ In the 3x3 battery, `gemma-4-E4B-it` was tested across five distinct perturbatio
 - **Positional Perturbation (V4a Inverted clue order):** 100% EM (774 tokens, 18.97s), demonstrating immunity to clue presentation ordering on smaller constraint spaces.
 - **Symbolic (V5a Replaced words with symbols):** 100% EM (1,089 tokens, 26.74s). Replacing natural-language entities with arbitrary symbols tests pure structural reasoning, isolated from any lexical or semantic priors. The model solved correctly despite the higher token cost, suggesting robust constraint propagation independent of token familiarity.
 
-### B. Moderate Scaling on 4x4 Puzzles
+### B. Moderate Scaling on 4×4 Puzzles (Medium)
 On the 4x4 baseline (`data/4x4.json`):
 - The model generated 2,375 output tokens and completed reasoning in 59.21 seconds.
 - The model achieved **100% Exact Match**, correctly resolving all 16 attributes across 4 houses.
 - Token consumption scaled by ~2.8× relative to the 3x3 baseline, maintaining complete reasoning integrity.
 
-### C. The 5x5 Complexity Cliff & Reasoning Breakdown
+### C. Continued Success on 4×5 Puzzles (Large)
+On the 4×5 baseline (`data/4x5.json`), with a search space of |S| = (4!)⁵ ≈ 7.96 × 10⁶ (Large):
+- The model generated **3,257 output tokens** and completed reasoning in **81.67 seconds**.
+- The model achieved **100% Exact Match**, correctly resolving all 20 attributes across 4 houses and 5 attribute dimensions.
+- Token consumption scaled by ~1.37× relative to the 4×4 baseline, reflecting the additional attribute dimension while maintaining full reasoning integrity.
+- This confirms that the model handles the jump from Medium to Large search spaces without degradation, placing the performance cliff somewhere beyond |S| ≈ 10⁷.
+
+### D. The 5×5 Complexity Cliff & Reasoning Breakdown (X-Large)
 On the 5x5 baseline (`data/5x5.json`), a severe reasoning collapse occurred:
 - **Token Inflation:** The model generated **11,055 tokens** (nearly 5× the 4x4 requirement and 14× the 3x3 requirement) over **287.33s** before terminating.
 - **Search-Space Thrashing:** Inspection of the raw reasoning trace (`raw/V0.txt`) revealed repetitive case analysis (testing hypotheses across cases A, B.1, B.2, C.1, C.2, D). The model repeatedly encountered dead ends and failed to propagate negative constraints globally.
@@ -72,5 +84,6 @@ Leverage structured knowledge sources (e.g., ConceptNet, Wikidata) to automate e
 - Utilize demographic frequency distributions to generate culturally grounded or out-of-distribution entity sets.
 
 ### C. Complexity-Adaptive Battery Benchmarking
-Given the stark performance divergence between 4x4 and 5x5:
-- Benchmark intermediate complexity classes (e.g., 4x5, 5x4) to locate the exact phase-transition point where greedy decoding breaks down.
+Given the stark performance divergence between 4×5 (Large, 100% EM) and 5×5 (X-Large, 0% EM):
+- The 4×5 result narrows the phase-transition window to [Large → X-Large], i.e., |S| ∈ [~10⁷, ~10¹⁰].
+- Benchmark intermediate complexity classes (e.g., 5x4, 6x3) to locate the exact phase-transition point where greedy decoding breaks down.

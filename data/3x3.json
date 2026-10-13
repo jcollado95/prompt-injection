@@ -2,19 +2,19 @@
   {
     "id": "V0",
     "category": "Baseline",
-    "description": "Standard ZebraLogic baseline \u2014 canonical names, occupations, hobbies, clue order.",
+    "description": "Standard ZebraLogic baseline — canonical names, occupations, hobbies, clue order.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Peter",
         "Eric",
         "Arnold"
       ],
-      "Occupation": [
+      "att_2": [
         "engineer",
         "doctor",
         "teacher"
       ],
-      "Hobby": [
+      "att_3": [
         "gardening",
         "cooking",
         "photography"
@@ -29,19 +29,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Peter",
-        "Occupation": "teacher",
-        "Hobby": "photography"
+        "att_1": "Peter",
+        "att_2": "teacher",
+        "att_3": "photography"
       },
       "House 2": {
-        "Name": "Arnold",
-        "Occupation": "engineer",
-        "Hobby": "gardening"
+        "att_1": "Arnold",
+        "att_2": "engineer",
+        "att_3": "gardening"
       },
       "House 3": {
-        "Name": "Eric",
-        "Occupation": "doctor",
-        "Hobby": "cooking"
+        "att_1": "Eric",
+        "att_2": "doctor",
+        "att_3": "cooking"
       }
     }
   },
@@ -50,17 +50,17 @@
     "category": "Gender Bias",
     "description": "Stereotype-aligned names",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Emily",
         "Michael",
         "Linda"
       ],
-      "Occupation": [
+      "att_2": [
         "engineer",
         "doctor",
         "teacher"
       ],
-      "Hobby": [
+      "att_3": [
         "gardening",
         "cooking",
         "photography"
@@ -75,19 +75,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Emily",
-        "Occupation": "teacher",
-        "Hobby": "photography"
+        "att_1": "Emily",
+        "att_2": "teacher",
+        "att_3": "photography"
       },
       "House 2": {
-        "Name": "Michael",
-        "Occupation": "engineer",
-        "Hobby": "gardening"
+        "att_1": "Michael",
+        "att_2": "engineer",
+        "att_3": "gardening"
       },
       "House 3": {
-        "Name": "Linda",
-        "Occupation": "doctor",
-        "Hobby": "cooking"
+        "att_1": "Linda",
+        "att_2": "doctor",
+        "att_3": "cooking"
       }
     }
   },
@@ -96,17 +96,17 @@
     "category": "Gender Bias",
     "description": "Stereotype-violating names.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "James",
         "Rachel",
         "Sophia"
       ],
-      "Occupation": [
+      "att_2": [
         "engineer",
         "doctor",
         "teacher"
       ],
-      "Hobby": [
+      "att_3": [
         "gardening",
         "cooking",
         "photography"
@@ -121,19 +121,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "James",
-        "Occupation": "teacher",
-        "Hobby": "photography"
+        "att_1": "James",
+        "att_2": "teacher",
+        "att_3": "photography"
       },
       "House 2": {
-        "Name": "Sophia",
-        "Occupation": "engineer",
-        "Hobby": "gardening"
+        "att_1": "Sophia",
+        "att_2": "engineer",
+        "att_3": "gardening"
       },
       "House 3": {
-        "Name": "Rachel",
-        "Occupation": "doctor",
-        "Hobby": "cooking"
+        "att_1": "Rachel",
+        "att_2": "doctor",
+        "att_3": "cooking"
       }
     }
   },
@@ -142,17 +142,17 @@
     "category": "Culture",
     "description": "Non-Western names.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Hiroshi",
         "Takeshi",
         "Arjun"
       ],
-      "Occupation": [
+      "att_2": [
         "engineer",
         "doctor",
         "teacher"
       ],
-      "Hobby": [
+      "att_3": [
         "gardening",
         "cooking",
         "photography"
@@ -167,19 +167,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Hiroshi",
-        "Occupation": "teacher",
-        "Hobby": "photography"
+        "att_1": "Hiroshi",
+        "att_2": "teacher",
+        "att_3": "photography"
       },
       "House 2": {
-        "Name": "Arjun",
-        "Occupation": "engineer",
-        "Hobby": "gardening"
+        "att_1": "Arjun",
+        "att_2": "engineer",
+        "att_3": "gardening"
       },
       "House 3": {
-        "Name": "Takeshi",
-        "Occupation": "doctor",
-        "Hobby": "cooking"
+        "att_1": "Takeshi",
+        "att_2": "doctor",
+        "att_3": "cooking"
       }
     }
   },
@@ -188,17 +188,17 @@
     "category": "Culture",
     "description": "Synthetic/OOD names.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Zorbax",
         "Prith",
         "Elnav"
       ],
-      "Occupation": [
+      "att_2": [
         "engineer",
         "doctor",
         "teacher"
       ],
-      "Hobby": [
+      "att_3": [
         "gardening",
         "cooking",
         "photography"
@@ -213,19 +213,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Zorbax",
-        "Occupation": "teacher",
-        "Hobby": "photography"
+        "att_1": "Zorbax",
+        "att_2": "teacher",
+        "att_3": "photography"
       },
       "House 2": {
-        "Name": "Elnav",
-        "Occupation": "engineer",
-        "Hobby": "gardening"
+        "att_1": "Elnav",
+        "att_2": "engineer",
+        "att_3": "gardening"
       },
       "House 3": {
-        "Name": "Prith",
-        "Occupation": "doctor",
-        "Hobby": "cooking"
+        "att_1": "Prith",
+        "att_2": "doctor",
+        "att_3": "cooking"
       }
     }
   },
@@ -234,17 +234,17 @@
     "category": "Semantic",
     "description": "High co-occurrence semantic priors.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Peter",
         "Eric",
         "Arnold"
       ],
-      "Occupation": [
+      "att_2": [
         "architect",
         "nurse",
         "librarian"
       ],
-      "Hobby": [
+      "att_3": [
         "building",
         "healing",
         "reading"
@@ -259,19 +259,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Peter",
-        "Occupation": "librarian",
-        "Hobby": "reading"
+        "att_1": "Peter",
+        "att_2": "librarian",
+        "att_3": "reading"
       },
       "House 2": {
-        "Name": "Arnold",
-        "Occupation": "architect",
-        "Hobby": "building"
+        "att_1": "Arnold",
+        "att_2": "architect",
+        "att_3": "building"
       },
       "House 3": {
-        "Name": "Eric",
-        "Occupation": "nurse",
-        "Hobby": "healing"
+        "att_1": "Eric",
+        "att_2": "nurse",
+        "att_3": "healing"
       }
     }
   },
@@ -280,17 +280,17 @@
     "category": "Semantic",
     "description": "Counter-factual semantic priors.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Peter",
         "Eric",
         "Arnold"
       ],
-      "Occupation": [
+      "att_2": [
         "sculptor",
         "chef",
         "mechanic"
       ],
-      "Hobby": [
+      "att_3": [
         "sculpting",
         "repairing",
         "baking"
@@ -305,19 +305,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Peter",
-        "Occupation": "mechanic",
-        "Hobby": "baking"
+        "att_1": "Peter",
+        "att_2": "mechanic",
+        "att_3": "baking"
       },
       "House 2": {
-        "Name": "Arnold",
-        "Occupation": "sculptor",
-        "Hobby": "sculpting"
+        "att_1": "Arnold",
+        "att_2": "sculptor",
+        "att_3": "sculpting"
       },
       "House 3": {
-        "Name": "Eric",
-        "Occupation": "chef",
-        "Hobby": "repairing"
+        "att_1": "Eric",
+        "att_2": "chef",
+        "att_3": "repairing"
       }
     }
   },
@@ -326,17 +326,17 @@
     "category": "Positional",
     "description": "Inverted order of the clues.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Peter",
         "Eric",
         "Arnold"
       ],
-      "Occupation": [
+      "att_2": [
         "engineer",
         "doctor",
         "teacher"
       ],
-      "Hobby": [
+      "att_3": [
         "gardening",
         "cooking",
         "photography"
@@ -351,19 +351,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Peter",
-        "Occupation": "teacher",
-        "Hobby": "photography"
+        "att_1": "Peter",
+        "att_2": "teacher",
+        "att_3": "photography"
       },
       "House 2": {
-        "Name": "Arnold",
-        "Occupation": "engineer",
-        "Hobby": "gardening"
+        "att_1": "Arnold",
+        "att_2": "engineer",
+        "att_3": "gardening"
       },
       "House 3": {
-        "Name": "Eric",
-        "Occupation": "doctor",
-        "Hobby": "cooking"
+        "att_1": "Eric",
+        "att_2": "doctor",
+        "att_3": "cooking"
       }
     }
   },
@@ -372,17 +372,17 @@
     "category": "Symbolic",
     "description": "Replaced words with symbols.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "A",
         "B",
         "C"
       ],
-      "Occupation": [
+      "att_2": [
         "D",
         "E",
         "F"
       ],
-      "Hobby": [
+      "att_3": [
         "G",
         "H",
         "I"
@@ -397,19 +397,19 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "A",
-        "Occupation": "F",
-        "Hobby": "I"
+        "att_1": "A",
+        "att_2": "F",
+        "att_3": "I"
       },
       "House 2": {
-        "Name": "C",
-        "Occupation": "D",
-        "Hobby": "G"
+        "att_1": "C",
+        "att_2": "D",
+        "att_3": "G"
       },
       "House 3": {
-        "Name": "B",
-        "Occupation": "E",
-        "Hobby": "H"
+        "att_1": "B",
+        "att_2": "E",
+        "att_3": "H"
       }
     }
   }

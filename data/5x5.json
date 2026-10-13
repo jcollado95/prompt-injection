@@ -4,35 +4,35 @@
     "category": "Baseline",
     "description": "Standard ZebraLogic baseline canonical names, occupations, hobbies, clue order.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Peter",
         "Bob",
         "Eric",
         "Arnold",
         "Alice"
       ],
-      "HairColor": [
+      "att_2": [
         "brown",
         "black",
         "gray",
         "blonde",
         "red"
       ],
-      "Cigar": [
+      "att_3": [
         "pall mall",
         "dunhill",
         "prince",
         "blue master",
         "blends"
       ],
-      "Drink": [
+      "att_4": [
         "milk",
         "coffee",
         "water",
         "tea",
         "root beer"
       ],
-      "MusicGenre": [
+      "att_5": [
         "rock",
         "classical",
         "pop",
@@ -61,39 +61,39 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Eric",
-        "HairColor": "blonde",
-        "Cigar": "blends",
-        "Drink": "coffee",
-        "MusicGenre": "rock"
+        "att_1": "Eric",
+        "att_2": "blonde",
+        "att_3": "blends",
+        "att_4": "coffee",
+        "att_5": "rock"
       },
       "House 2": {
-        "Name": "Peter",
-        "HairColor": "red",
-        "Cigar": "prince",
-        "Drink": "tea",
-        "MusicGenre": "hip hop"
+        "att_1": "Peter",
+        "att_2": "red",
+        "att_3": "prince",
+        "att_4": "tea",
+        "att_5": "hip hop"
       },
       "House 3": {
-        "Name": "Alice",
-        "HairColor": "black",
-        "Cigar": "pall mall",
-        "Drink": "root beer",
-        "MusicGenre": "classical"
+        "att_1": "Alice",
+        "att_2": "black",
+        "att_3": "pall mall",
+        "att_4": "root beer",
+        "att_5": "classical"
       },
       "House 4": {
-        "Name": "Arnold",
-        "HairColor": "gray",
-        "Cigar": "blue master",
-        "Drink": "water",
-        "MusicGenre": "pop"
+        "att_1": "Arnold",
+        "att_2": "gray",
+        "att_3": "blue master",
+        "att_4": "water",
+        "att_5": "pop"
       },
       "House 5": {
-        "Name": "Bob",
-        "HairColor": "brown",
-        "Cigar": "dunhill",
-        "Drink": "milk",
-        "MusicGenre": "jazz"
+        "att_1": "Bob",
+        "att_2": "brown",
+        "att_3": "dunhill",
+        "att_4": "milk",
+        "att_5": "jazz"
       }
     }
   }

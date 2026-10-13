@@ -4,13 +4,38 @@ Supports dynamic attributes based on inference logic.
 """
 
 import csv
+import math
 from pathlib import Path
 from datetime import datetime
+import re as _re
 
 _CATEGORY_ORDER = ["Baseline", "Gender Bias", "Culture", "Semantic", "Positional", "Symbolic"]
 
 def _pct(value: float) -> str:
     return f"{value * 100:.1f}%"
+
+
+def _get_size_label(dataset: str) -> str:
+    """Return the ZebraLogic paper size category for an NxM dataset.
+
+    Categories are based on |S| = (N!)^M:
+      Small   : |S| < 10^3
+      Medium  : 10^3  <= |S| < 10^6
+      Large   : 10^6  <= |S| < 10^10
+      X-Large : |S| >= 10^10
+    """
+    m = _re.match(r"(\d+)x(\d+)", dataset)
+    if not m:
+        return ""
+    n, num_attrs = int(m.group(1)), int(m.group(2))
+    search_space = math.factorial(n) ** num_attrs
+    if search_space < 1e3:
+        return "Small"
+    if search_space < 1e6:
+        return "Medium"
+    if search_space < 1e10:
+        return "Large"
+    return "X-Large"
 
 def generate_reports(
     results: list[dict],
@@ -77,7 +102,9 @@ def generate_reports(
         f"**Model:** `{model}`  ",
     ]
     if dataset:
-        lines.append(f"**Dataset:** `{dataset}`  ")
+        size_label = _get_size_label(dataset)
+        size_suffix = f" ({size_label})" if size_label else ""
+        lines.append(f"**Dataset:** {dataset}{size_suffix}  ")
     lines.append(f"**Temperature:** `{temp_str}`  ")
     lines.append(f"**Output Tokens:** `{tokens_str}`  ")
     lines.append(f"**Total Running Time:** `{total_time_str}`  ")

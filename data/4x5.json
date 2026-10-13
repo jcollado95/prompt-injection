@@ -1,0 +1,83 @@
+[
+  {
+    "id": "V0",
+    "category": "Baseline",
+    "description": "Standard ZebraLogic baseline.",
+    "attributes": {
+      "att_1": [
+        "Arnold",
+        "Eric",
+        "Peter",
+        "Alice"
+      ],
+      "att_2": [
+        "basketball",
+        "soccer",
+        "swimming",
+        "tennis"
+      ],
+      "att_3": [
+        "oneplus 9",
+        "google pixel 6",
+        "samsung galaxy s21",
+        "iphone 13"
+      ],
+      "att_4": [
+        "toyota camry",
+        "ford f150",
+        "tesla model 3",
+        "honda civic"
+      ],
+      "att_5": [
+        "roses",
+        "daffodils",
+        "lilies",
+        "carnations"
+      ]
+    },
+    "clues": [
+      "The person who owns a Honda Civic is the person who uses an iPhone 13.",
+      "The person who loves tennis is the person who uses an iPhone 13.",
+      "The person who uses a Google Pixel 6 is somewhere to the right of the person who loves basketball.",
+      "The person who uses an iPhone 13 is directly left of Eric.",
+      "Alice is the person who owns a Ford F-150.",
+      "Arnold is the person who loves a bouquet of daffodils.",
+      "The person who loves the boquet of lilies is in the third house.",
+      "The person who loves soccer is Peter.",
+      "The person who uses a OnePlus 9 is the person who loves the rose bouquet.",
+      "The person who loves a carnations arrangement is not in the fourth house.",
+      "Peter is the person who loves the boquet of lilies.",
+      "The person who owns a Toyota Camry is directly left of the person who owns a Tesla Model 3."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "att_1": "Arnold",
+        "att_2": "tennis",
+        "att_3": "iphone 13",
+        "att_4": "honda civic",
+        "att_5": "daffodils"
+      },
+      "House 2": {
+        "att_1": "Eric",
+        "att_2": "basketball",
+        "att_3": "samsung galaxy s21",
+        "att_4": "toyota camry",
+        "att_5": "carnations"
+      },
+      "House 3": {
+        "att_1": "Peter",
+        "att_2": "soccer",
+        "att_3": "google pixel 6",
+        "att_4": "tesla model 3",
+        "att_5": "lilies"
+      },
+      "House 4": {
+        "att_1": "Alice",
+        "att_2": "swimming",
+        "att_3": "oneplus 9",
+        "att_4": "ford f150",
+        "att_5": "roses"
+      }
+    }
+  }
+]

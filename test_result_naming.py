@@ -1,4 +1,5 @@
 import tempfile
+import math
 import json
 import csv
 from pathlib import Path
@@ -43,7 +44,7 @@ def test_reporting_with_tokens_and_time():
                 "cells_correct": 3,
                 "total_cells": 3,
                 "error": None,
-                "hits_Name": 3,
+                "hits_att_1": 3,
             },
             {
                 "variant_id": "V1a",
@@ -94,7 +95,7 @@ def test_reporting_with_tokens_and_time():
             print(line)
         print("-----------------------------------------\n")
 
-        assert "**Dataset:** `3x3`" in md_content
+        assert "**Dataset:** 3x3 (Small)" in md_content
         assert "**Temperature:** `0.0`" in md_content
         assert "**Output Tokens:** `2,100`" in md_content
         assert "**Total Running Time:** `21.45s`" in md_content
@@ -136,14 +137,26 @@ def test_reporting_when_tokens_none():
 
         md_file = tmp_path / "report.md"
         md_content = md_file.read_text(encoding="utf-8")
+        assert "**Dataset:** 4x4 (Medium)" in md_content
         assert "**Temperature:** `0.5`" in md_content
         assert "**Output Tokens:** `—`" in md_content
         assert "**Total Running Time:** `5.00s`" in md_content
         print("Reporting with None tokens test passed successfully!")
 
 
+def test_size_label():
+    from report import _get_size_label
+    assert _get_size_label("3x3") == "Small",   f"3x3 should be Small, got {_get_size_label('3x3')}"
+    assert _get_size_label("4x4") == "Medium",  f"4x4 should be Medium, got {_get_size_label('4x4')}"
+    assert _get_size_label("4x5") == "Large",   f"4x5 should be Large, got {_get_size_label('4x5')}"
+    assert _get_size_label("5x5") == "X-Large", f"5x5 should be X-Large, got {_get_size_label('5x5')}"
+    assert _get_size_label("custom") == "",      f"non-NxM should return empty"
+    print("Size label test passed successfully!")
+
+
 if __name__ == "__main__":
     test_naming_logic()
     test_reporting_with_tokens_and_time()
     test_reporting_when_tokens_none()
+    test_size_label()
     print("\nALL VERIFICATION TESTS PASSED SUCCESSFULLY!")

@@ -4,25 +4,25 @@
     "category": "Baseline",
     "description": "Standard ZebraLogic baseline canonical names, occupations, hobbies, clue order.",
     "attributes": {
-      "Name": [
+      "att_1": [
         "Eric",
         "Arnold",
         "Alice",
         "Peter"
       ],
-      "Cigar": [
+      "att_2": [
         "blue master",
         "dunhill",
         "pall mall",
         "prince"
       ],
-      "Lunch": [
+      "att_3": [
         "stew",
         "spaguetti",
         "pizza",
         "grilled cheese"
       ],
-      "Book": [
+      "att_4": [
         "fantasy",
         "mystery",
         "science fiction",
@@ -43,28 +43,28 @@
     ],
     "ground_truth": {
       "House 1": {
-        "Name": "Eric",
-        "Cigar": "prince",
-        "Lunch": "spaguetti",
-        "Book": "romance"
+        "att_1": "Eric",
+        "att_2": "prince",
+        "att_3": "spaguetti",
+        "att_4": "romance"
       },
       "House 2": {
-        "Name": "Arnold",
-        "Cigar": "pall mall",
-        "Lunch": "grilled cheese",
-        "Book": "science fiction"
+        "att_1": "Arnold",
+        "att_2": "pall mall",
+        "att_3": "grilled cheese",
+        "att_4": "science fiction"
       },
       "House 3": {
-        "Name": "Alice",
-        "Cigar": "blue master",
-        "Lunch": "pizza",
-        "Book": "mystery"
+        "att_1": "Alice",
+        "att_2": "blue master",
+        "att_3": "pizza",
+        "att_4": "mystery"
       },
       "House 4": {
-        "Name": "Peter",
-        "Cigar": "dunhill",
-        "Lunch": "stew",
-        "Book": "fantasy"
+        "att_1": "Peter",
+        "att_2": "dunhill",
+        "att_3": "stew",
+        "att_4": "fantasy"
       }
     }
   }

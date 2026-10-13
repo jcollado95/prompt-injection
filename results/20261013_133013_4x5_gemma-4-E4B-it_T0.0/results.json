@@ -1,0 +1,24 @@
+[
+  {
+    "variant_id": "V0",
+    "category": "Baseline",
+    "description": "Standard ZebraLogic baseline.",
+    "parse_success": true,
+    "exact_match": 1,
+    "cell_accuracy": 1.0,
+    "avg_attr_acc": 1.0,
+    "cells_correct": 4,
+    "total_cells": 4,
+    "hits_Name": 4,
+    "hits_Sport": 4,
+    "hits_Phone": 4,
+    "hits_Car": 4,
+    "hits_Flower": 4,
+    "dataset": "4x5",
+    "model": "gemma-4-E4B-it",
+    "temperature": 0.0,
+    "output_tokens": 3257,
+    "elapsed_sec": 81.67,
+    "error": null
+  }
+]
