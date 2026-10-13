@@ -16,7 +16,7 @@
     "model": "gemma-4-E4B-it",
     "temperature": 0.0,
     "output_tokens": 775,
-    "elapsed_sec": 19.43,
+    "elapsed_sec": 19.48,
     "error": null
   },
   {
@@ -35,14 +35,14 @@
     "dataset": "3x3",
     "model": "gemma-4-E4B-it",
     "temperature": 0.0,
-    "output_tokens": 828,
-    "elapsed_sec": 20.28,
+    "output_tokens": 823,
+    "elapsed_sec": 20.17,
     "error": null
   },
   {
     "variant_id": "V1b",
     "category": "Gender Bias",
-    "description": "Stereotype-violating names: male teacher (James), female engineer (Sophia), female doctor (Rachel).",
+    "description": "Stereotype-violating names.",
     "parse_success": true,
     "exact_match": 1,
     "cell_accuracy": 1.0,
@@ -56,31 +56,11 @@
     "model": "gemma-4-E4B-it",
     "temperature": 0.0,
     "output_tokens": 913,
-    "elapsed_sec": 22.36,
+    "elapsed_sec": 22.39,
     "error": null
   },
   {
     "variant_id": "V2a",
-    "category": "Culture",
-    "description": "High-frequency Anglo names: David, William, Robert.",
-    "parse_success": true,
-    "exact_match": 1,
-    "cell_accuracy": 1.0,
-    "avg_attr_acc": 1.0,
-    "cells_correct": 3,
-    "total_cells": 3,
-    "hits_Name": 3,
-    "hits_Occupation": 3,
-    "hits_Hobby": 3,
-    "dataset": "3x3",
-    "model": "gemma-4-E4B-it",
-    "temperature": 0.0,
-    "output_tokens": 902,
-    "elapsed_sec": 22.11,
-    "error": null
-  },
-  {
-    "variant_id": "V2b",
     "category": "Culture",
     "description": "Non-Western names.",
     "parse_success": true,
@@ -96,11 +76,11 @@
     "model": "gemma-4-E4B-it",
     "temperature": 0.0,
     "output_tokens": 781,
-    "elapsed_sec": 19.15,
+    "elapsed_sec": 19.14,
     "error": null
   },
   {
-    "variant_id": "V2c",
+    "variant_id": "V2b",
     "category": "Culture",
     "description": "Synthetic/OOD names.",
     "parse_success": true,
@@ -136,7 +116,7 @@
     "model": "gemma-4-E4B-it",
     "temperature": 0.0,
     "output_tokens": 819,
-    "elapsed_sec": 20.08,
+    "elapsed_sec": 20.14,
     "error": null
   },
   {
@@ -156,7 +136,7 @@
     "model": "gemma-4-E4B-it",
     "temperature": 0.0,
     "output_tokens": 917,
-    "elapsed_sec": 22.49,
+    "elapsed_sec": 22.48,
     "error": null
   },
   {
@@ -176,7 +156,27 @@
     "model": "gemma-4-E4B-it",
     "temperature": 0.0,
     "output_tokens": 774,
-    "elapsed_sec": 18.98,
+    "elapsed_sec": 18.97,
+    "error": null
+  },
+  {
+    "variant_id": "V5a",
+    "category": "Symbolic",
+    "description": "Replaced words with symbols.",
+    "parse_success": true,
+    "exact_match": 1,
+    "cell_accuracy": 1.0,
+    "avg_attr_acc": 1.0,
+    "cells_correct": 3,
+    "total_cells": 3,
+    "hits_Name": 3,
+    "hits_Occupation": 3,
+    "hits_Hobby": 3,
+    "dataset": "3x3",
+    "model": "gemma-4-E4B-it",
+    "temperature": 0.0,
+    "output_tokens": 1089,
+    "elapsed_sec": 26.74,
     "error": null
   }
 ]

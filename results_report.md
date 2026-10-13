@@ -8,7 +8,7 @@ We conducted zero-shot empirical evaluations using `gemma-4-E4B-it` (temperature
 
 | Dataset Dimension | Evaluated Variants | Exact Match (EM) | Cell Accuracy | Avg Attr Accuracy | Output Tokens | Total Running Time | Avg Tokens / Variant | Avg Latency / Variant |
 |:------------------|:-------------------|:-----------------|:--------------|:------------------|:--------------|:-------------------|:---------------------|:----------------------|
-| **3x3** | 9 (Full Battery) | **100.0%** (9/9) | **100.0%** | **100.0%** | 7,551 | 185.51s (~3.1m) | 839 tok | 20.61s |
+| **3x3** | 9 (Full Battery) | **100.0%** (9/9) | **100.0%** | **100.0%** | 7,733 | 190.15s (~3.2m) | 859 tok | 21.13s |
 | **4x4** | 1 (Baseline V0) | **100.0%** (1/1) | **100.0%** | **100.0%** | 2,375 | 59.21s (~1.0m) | 2,375 tok | 59.21s |
 | **5x5** | 1 (Baseline V0) | **0.0%** (0/1) | **0.0%** | **16.0%** (4/25) | 11,055 | 287.33s (~4.8m) | 11,055 tok | 287.33s |
 
@@ -17,12 +17,13 @@ We conducted zero-shot empirical evaluations using `gemma-4-E4B-it` (temperature
 ## 2. Key Empirical Findings
 
 ### A. Surface & Structural Robustness on 3x3 Puzzles
-In the 3x3 battery, `gemma-4-E4B-it` was tested across four distinct perturbation categories totaling 9 variants:
-- **Baseline (V0):** 100% EM (775 tokens, 19.43s).
+In the 3x3 battery, `gemma-4-E4B-it` was tested across five distinct perturbation categories totaling 9 variants:
+- **Baseline (V0):** 100% EM (775 tokens, 19.48s).
 - **Gender Bias (V1a stereotype-aligned, V1b stereotype-violating):** 100% EM for both variants, showing no vulnerability to gendered occupation priors.
-- **Culture (V2a Anglo, V2b Non-Western, V2c Synthetic/OOD):** 100% EM across all 3 variants, proving resilient to low-frequency and synthetic name entities.
+- **Culture (V2a Non-Western, V2b Synthetic/OOD):** 100% EM across both variants, proving resilient to low-frequency and synthetic name entities.
 - **Semantic Priors (V3a High co-occurrence, V3b Counter-factual):** 100% EM on both variants, demonstrating robust adherence to logical clues over semantic associations.
-- **Positional Perturbation (V4a Inverted clue order):** 100% EM (774 tokens, 18.98s), demonstrating immunity to clue presentation ordering on smaller constraint spaces.
+- **Positional Perturbation (V4a Inverted clue order):** 100% EM (774 tokens, 18.97s), demonstrating immunity to clue presentation ordering on smaller constraint spaces.
+- **Symbolic (V5a Replaced words with symbols):** 100% EM (1,089 tokens, 26.74s). Replacing natural-language entities with arbitrary symbols tests pure structural reasoning, isolated from any lexical or semantic priors. The model solved correctly despite the higher token cost, suggesting robust constraint propagation independent of token familiarity.
 
 ### B. Moderate Scaling on 4x4 Puzzles
 On the 4x4 baseline (`data/4x4.json`):

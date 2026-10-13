@@ -1,4 +1,4 @@
-variant_id    : V2c
+variant_id    : V2b
 model         : gemma-4-E4B-it
 output_tokens : 842
 elapsed_sec   : 20.64

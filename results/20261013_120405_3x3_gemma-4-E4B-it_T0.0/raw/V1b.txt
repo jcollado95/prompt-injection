@@ -1,7 +1,7 @@
 variant_id    : V1b
 model         : gemma-4-E4B-it
 output_tokens : 913
-elapsed_sec   : 22.36
+elapsed_sec   : 22.39
 error         : None
 ============================================================
 

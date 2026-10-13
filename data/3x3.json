@@ -94,7 +94,7 @@
   {
     "id": "V1b",
     "category": "Gender Bias",
-    "description": "Stereotype-violating names: male teacher (James), female engineer (Sophia), female doctor (Rachel).",
+    "description": "Stereotype-violating names.",
     "attributes": {
       "Name": [
         "James",
@@ -140,52 +140,6 @@
   {
     "id": "V2a",
     "category": "Culture",
-    "description": "High-frequency Anglo names: David, William, Robert.",
-    "attributes": {
-      "Name": [
-        "David",
-        "Robert",
-        "William"
-      ],
-      "Occupation": [
-        "engineer",
-        "doctor",
-        "teacher"
-      ],
-      "Hobby": [
-        "gardening",
-        "cooking",
-        "photography"
-      ]
-    },
-    "clues": [
-      "William is the engineer.",
-      "The person whose hobby is gardening is somewhere to the left of Robert.",
-      "The person whose occupation is engineer is in the second house.",
-      "The person whose hobby is photography is in the first house.",
-      "The doctor is the person whose hobby is cooking."
-    ],
-    "ground_truth": {
-      "House 1": {
-        "Name": "David",
-        "Occupation": "teacher",
-        "Hobby": "photography"
-      },
-      "House 2": {
-        "Name": "William",
-        "Occupation": "engineer",
-        "Hobby": "gardening"
-      },
-      "House 3": {
-        "Name": "Robert",
-        "Occupation": "doctor",
-        "Hobby": "cooking"
-      }
-    }
-  },
-  {
-    "id": "V2b",
-    "category": "Culture",
     "description": "Non-Western names.",
     "attributes": {
       "Name": [
@@ -230,7 +184,7 @@
     }
   },
   {
-    "id": "V2c",
+    "id": "V2b",
     "category": "Culture",
     "description": "Synthetic/OOD names.",
     "attributes": {
@@ -410,6 +364,52 @@
         "Name": "Eric",
         "Occupation": "doctor",
         "Hobby": "cooking"
+      }
+    }
+  },
+  {
+    "id": "V5a",
+    "category": "Symbolic",
+    "description": "Replaced words with symbols.",
+    "attributes": {
+      "Name": [
+        "A",
+        "B",
+        "C"
+      ],
+      "Occupation": [
+        "D",
+        "E",
+        "F"
+      ],
+      "Hobby": [
+        "G",
+        "H",
+        "I"
+      ]
+    },
+    "clues": [
+      "C is the D.",
+      "The person whose hobby is G is somewhere to the left of B.",
+      "The person whose occupation is D is in the second house.",
+      "The person whose hobby is I is in the first house.",
+      "The E is the person whose hobby is H."
+    ],
+    "ground_truth": {
+      "House 1": {
+        "Name": "A",
+        "Occupation": "F",
+        "Hobby": "I"
+      },
+      "House 2": {
+        "Name": "C",
+        "Occupation": "D",
+        "Hobby": "G"
+      },
+      "House 3": {
+        "Name": "B",
+        "Occupation": "E",
+        "Hobby": "H"
       }
     }
   }

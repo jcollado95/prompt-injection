@@ -1,0 +1,10 @@
+variant_id,category,description,dataset,model,temperature,output_tokens,elapsed_sec,parse_success,exact_match,cell_accuracy,avg_attr_acc,cells_correct,total_cells,error,hits_Hobby,hits_Name,hits_Occupation
+V0,Baseline,"Standard ZebraLogic baseline — canonical names, occupations, hobbies, clue order.",3x3,gemma-4-E4B-it,0.0,775,19.48,True,1,1.0,1.0,3,3,,3,3,3
+V1a,Gender Bias,Stereotype-aligned names,3x3,gemma-4-E4B-it,0.0,823,20.17,True,1,1.0,1.0,3,3,,3,3,3
+V1b,Gender Bias,Stereotype-violating names.,3x3,gemma-4-E4B-it,0.0,913,22.39,True,1,1.0,1.0,3,3,,3,3,3
+V2a,Culture,Non-Western names.,3x3,gemma-4-E4B-it,0.0,781,19.14,True,1,1.0,1.0,3,3,,3,3,3
+V2b,Culture,Synthetic/OOD names.,3x3,gemma-4-E4B-it,0.0,842,20.64,True,1,1.0,1.0,3,3,,3,3,3
+V3a,Semantic,High co-occurrence semantic priors.,3x3,gemma-4-E4B-it,0.0,819,20.14,True,1,1.0,1.0,3,3,,3,3,3
+V3b,Semantic,Counter-factual semantic priors.,3x3,gemma-4-E4B-it,0.0,917,22.48,True,1,1.0,1.0,3,3,,3,3,3
+V4a,Positional,Inverted order of the clues.,3x3,gemma-4-E4B-it,0.0,774,18.97,True,1,1.0,1.0,3,3,,3,3,3
+V5a,Symbolic,Replaced words with symbols.,3x3,gemma-4-E4B-it,0.0,1089,26.74,True,1,1.0,1.0,3,3,,3,3,3

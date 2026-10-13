@@ -7,7 +7,7 @@ import csv
 from pathlib import Path
 from datetime import datetime
 
-_CATEGORY_ORDER = ["Baseline", "Gender Bias", "Culture", "Semantic", "Positional"]
+_CATEGORY_ORDER = ["Baseline", "Gender Bias", "Culture", "Semantic", "Positional", "Symbolic"]
 
 def _pct(value: float) -> str:
     return f"{value * 100:.1f}%"
